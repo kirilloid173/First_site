@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue3</title>
+</head>
+<body>
+<div id="vues">
+<button v-on:click="cout++">Plus to cout (+)</button>
+<p>{{cout}}</p>
+<button v-on:click="cout--">Minus to cout(-)</button><br><br>
+<input type="text" v-model="name">
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var vues=new Vue({
+        el:'#vues',
+        data:{cout:0, name:"Kirill Yagudin"},
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>State</title>
+  
+</head>
+<body>
+    <style>
+    html{
+        font-size: 26px;
+    }
+    </style>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
+    <script type="text/babel">
+class Hello extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={helloandwelcome: "Hello and welcome!"};
+        this.state2={bye: "Bye bye!"};
+    }
+    render(){
+        return <h1>{this.state2.bye}</h1>
+    }
+}
+ReactDOM.render(
+    <Hello/>,
+    document.getElementById("hellos")
+)
+
+</script>
+        <div id="hellos"></div>
+
+  
+</body>
+</html>

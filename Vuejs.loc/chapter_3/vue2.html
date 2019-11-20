@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vuejs</title>
+</head>
+<style>
+    html{
+        font-size: 24px;
+    }
+
+</style>
+<body>
+<div id="news">
+    <p>{{info()}}</p>
+    <p>{{name}}</p>
+    <p>{{age}}</p>
+</div>
+<div id="links">
+    <a v-bind:href="link">{{text}}</a>
+</div>
+<div id="temp"></div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+ /*   var news=new Vue({
+        el:'#news',
+        data:{name:"kirill", age:15},
+        methods:{
+           first_info:function () {
+               return "Hello! You`re info"
+           }
+
+        }
+
+    })*/
+ var news=new Vue({
+     el:'#news',
+     data:{name:"kirill", age:17},
+     methods:{
+         info:function () {
+             return "Hello!"
+         }
+     }
+ })
+    var links=new Vue({
+       el:'#links',
+        data:{text:"Google", link:"https://google.com"}
+    })
+    var temps=new Vue({
+        el:'#temp',
+        template:'<p>Hello world!</p>'
+    })
+</script>
+</body>
+</html>

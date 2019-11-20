@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue_Component</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<style>
+    html{
+        font-size: 32px;
+        font-weight: bold;
+    }
+</style>
+<body><div id="app">
+    <Hi></Hi>
+</div>
+
+<script>
+    Vue.component('Hi', {
+        template:'<h1>Hi from 2019!</h1>'
+
+    })
+
+    new Vue({el:"#app"})
+
+</script>
+<script>
+    Vue.component('counter', {
+        data: function(){
+            return {
+                header: 'Counter Program',
+                count:0
+            }
+        },
+        template:`<div><h2>{{header}}</h2>
+                <button v-on:click="increase">+</button>
+                <span>{{count}}</span>
+            </div>`,
+        methods:{
+            increase:function(){
+                this.count++;
+            }
+        }
+    });
+</script>
+</body>
+</html>

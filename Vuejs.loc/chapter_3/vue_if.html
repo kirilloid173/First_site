@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:v-for="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Изучаем Vue.js</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+<div id="app">
+    <p v-if="visible">Первый параграф</p>
+    <p>Второй параграф</p>
+    <button v-on:click="visible=!visible">{{visible?'Скрыть':'Показать'}}</button>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+
+    var app = new Vue({
+        el: '#app',
+        data: {visible: true}
+    });
+
+
+</script>
+</body>
+</html>
